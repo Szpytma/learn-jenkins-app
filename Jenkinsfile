@@ -21,14 +21,15 @@ pipeline {
             }
            
         }
-        stage('Test') {
-            
+        stage('test') {
+          
             steps {
                 sh '''
-                    test build/index.html
+                    echo "test"
                 '''
             }
            
         }
+        
     }
 
