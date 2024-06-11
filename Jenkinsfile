@@ -26,6 +26,8 @@ pipeline {
             steps {
                 sh '''
                     echo "test"
+                    test build/index.html
+                    npm test
                 '''
             }
            
