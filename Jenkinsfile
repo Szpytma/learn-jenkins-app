@@ -109,7 +109,7 @@ pipeline {
             }
 
             environment {
-                CI_ENVIRONMENT_URL = 'YOUR NETLIFY URL'
+                CI_ENVIRONMENT_URL = 'https://shiny-choux-186816.netlify.app'
             }
             steps {
                 sh '''
