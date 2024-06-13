@@ -6,12 +6,7 @@ pipeline {
         REACT_APP_VERSION = "1.0.$BUILD_ID"
     }
     stages {
-        stage('Docker'){
-            steps{
-                sh 'docker build -t my-playwright .'
-            }
-        }
-
+        
         stage('Build') {
             agent{
                 docker{
@@ -58,7 +53,6 @@ pipeline {
 
                     steps {
                         sh '''
-                            
                             serve -s build &
                             sleep 10
                             npx playwright test  --reporter=html
